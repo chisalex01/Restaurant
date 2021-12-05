@@ -19,6 +19,9 @@ namespace Restaurant
                 showMenu = MainMenu();
             }
         }
+
+        public static Cart cart = new Cart();
+        public static int bill = 0;
         static bool MainMenu()
         {
             Product capriciosa = PizzaFactory.MakePizza(PizzaType.Capriciosa);
@@ -45,11 +48,9 @@ namespace Restaurant
             Product cola = DrinkFactory.MakeDrink(DrinkType.Cola);
             Product lemonade = DrinkFactory.MakeDrink(DrinkType.Lemonade);
             Product fresh = DrinkFactory.MakeDrink(DrinkType.Fresh);
-            Cart cart = new Cart();
 
-            int bill = 0;
-            
-            cart.addProduct(margherita);
+
+           
 
             Console.Clear();
             Console.WriteLine("Choose a category:");
